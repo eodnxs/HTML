@@ -15,10 +15,24 @@
         <p></p>
 
         <!-- HTML links are defined with the <a> tag -->
-        <a href=""></a>
+        <!-- The link text is the part that will be visible to the reader. -->
+        <a href="">visible part</a>
 
         <!-- HTML images are defined with the <img> tag. -->
+        <!-- Add a background image on a HTML element: -->
+        <!-- If you want the entire page to have a background image, you must specify the background image on the <body> element: -->
+        <!-- To avoid the background image from repeating itself, set the background-repeat property to no-repeat. -->
         <img src="" alt="" width="" height="">
+        <p style="background-image: url('img_girl.jpg');"></p>
+        <style> body {background-image: url('img_girl.jpg');  background-repeat: no-repeat;} </style>
+        
+        <!-- The HTML <picture> element gives web developers more flexibility in specifying image resources. -->
+        <!-- This way the browser can choose the image that best fits the current view and/or device.     -->
+        <picture>
+            <source media="(min-width: 650px)" srcset="img_food.jpg">
+            <source media="(min-width: 465px)" srcset="img_car.jpg">
+            <img src="img_girl.jpg">
+        </picture>
 
         <!-- Use <br> if you want a line break (a new line) without starting a new paragraph: -->
         <!-- The <br> tag defines a line break, and is an empty element without a closing tag -->
@@ -48,6 +62,10 @@ Attributes usually come in name/value pairs like: name="value"
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+
+        <!-- To use an external style sheet, add a link to it in the <head> section of each HTML page -->
+        <link rel="stylesheet" href="styles.css">
+
     </head>
     <body>
         <!-- The <a> tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to -->
@@ -63,10 +81,16 @@ Attributes usually come in name/value pairs like: name="value"
         <!-- The CSS font-family property defines the font to be used for an HTML element -->
         <!-- The CSS font-size property defines the text size for an HTML element: -->
         <!-- The CSS text-align property defines the horizontal text alignment for an HTML element: -->
+        <!-- You can set the background color for HTML elements: -->
+        <!-- You can set the color of text: -->
+        <!-- You can set the color of borders: -->
         <p style="color:#fff"></p>
         <h1 style="font-family: verdana;">This is a heading</h1>
         <h1 style="font-size: 300%;">This is a heading</h1>
         <h1 style="text-align:center;">This is a heading</h1>
+        <h1 style="background-color:DodgerBlue;">Hello World</h1>
+        <h1 style="color:Tomato;">Hello World</h1>
+        <h1 style="border:2px solid Tomato;">Hello World</h1>
 
         <!-- You should always include the lang attribute inside the <html> tag, to declare the language of the Web page.
              This is meant to assist search engines and browsers. -->
@@ -79,7 +103,92 @@ Attributes usually come in name/value pairs like: name="value"
         <!-- The <hr> element is used to separate content (or define a change) in an HTML page: -->
         <hr>
 
+        <!-- Create a Bookmark in HTML -->
+        <!-- To create a bookmark - first create the bookmark, then add a link to it. -->
+        <!-- When the link is clicked, the page will scroll down or up to the location with the bookmark. -->
+        <h2 id="C4">Chapter 4</h2>
+        <a href="#C4">Jump to Chapter 4</a>
+
     </body>
 </html>
 
- 
+
+
+<!-- HTML Text Formatting
+
+HTML contains several elements for defining text with a special meaning.
+Formatting elements were designed to display special types of text: -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <!-- Bold text -->
+        <b></b>
+        <!-- Important text -->
+        <strong></strong>
+        <!-- Italic text -->
+        <i></i>
+        <!-- Emphasized text -->
+        <em></em>
+        <!-- Marked text -->
+        <mark></mark>
+        <!-- Smaller text -->
+        <small></small>
+        <!-- Deleted text -->
+        <del></del>
+        <!-- Inserted text -->
+        <ins></ins>
+        <!-- Subscript text -->
+        <sub></sub>
+        <!-- Superscript text -->
+        <sup></sup>
+    
+    </body>
+</html>
+
+
+<!-- HTML Quotation and Citation Elements -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <!-- The HTML <blockquote> element defines a section that is quoted from another source. -->
+        <!-- Browsers usually indent <blockquote> elements. -->
+        <blockquote></blockquote>
+
+        <!-- The HTML <q> tag defines a short quotation. -->
+        <!-- Browsers normally insert quotation marks around the quotation. -->
+        <q></q>
+
+        <!-- HTML <abbr> for Abbreviations -->
+        <!-- Marking abbreviations can give useful information to browsers, translation systems and search-engines. -->
+        <!-- Tip: Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element.  -->
+        <abbr title="World Health Organization">WHO</abbr>
+
+        <!-- HTML <address> for Contact Information -->
+        <!-- The contact information can be an email address, URL, physical address, phone number, social media handle, etc. -->
+        <!-- The text in the <address> element usually renders in italic, and browsers will always add a line break before and after the <address> element. -->
+        <address></address>
+
+        <!-- HTML <cite> for Work Title -->
+        <!-- The text in the <cite> element usually renders in italic. -->
+        <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+            
+    </body>
+</html>
